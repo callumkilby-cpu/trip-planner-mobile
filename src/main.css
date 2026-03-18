@@ -7,7 +7,7 @@
   font-weight: 600;
   font-style: normal;
   font-display: swap;
-  src: url('/fonts/FreightBig-SemiBold.woff2') format('woff2');
+  src: url('../public/fonts/FreightBig-SemiBold.woff2') format('woff2');
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  src: url('/fonts/FreightBig-Bold.woff2') format('woff2');
+  src: url('../public/fonts/FreightBig-Bold.woff2') format('woff2');
 }
 
 :root {
