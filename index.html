@@ -836,18 +836,16 @@
 
     const ctaBar = document.querySelector('.sticky-cta-bar');
     const trigger = document.querySelectorAll('.article-intro .cn-body-core')[1];
-    if (ctaBar && trigger) {
-      new IntersectionObserver(([entry]) => {
-        const pastTrigger = entry.boundingClientRect.top < window.innerHeight && entry.boundingClientRect.top < 0 || entry.isIntersecting;
-        ctaBar.classList.toggle('is-visible', pastTrigger);
-      }, { threshold: 0 }).observe(trigger);
-
-      window.addEventListener('scroll', () => {
-        const rect = trigger.getBoundingClientRect();
-        ctaBar.classList.toggle('is-visible', rect.top < window.innerHeight);
+    const scrollContainer = document.querySelector('.device-frame');
+    if (ctaBar && trigger && scrollContainer) {
+      scrollContainer.addEventListener('scroll', () => {
+        const frameRect = scrollContainer.getBoundingClientRect();
+        const triggerRect = trigger.getBoundingClientRect();
+        ctaBar.classList.toggle('is-visible', triggerRect.top < frameRect.bottom);
       }, { passive: true });
     }
 
+    const deviceFrame = document.querySelector('.device-frame');
     const vibesDrawer = document.getElementById('trip-drawer');
     const detailsDrawer = document.getElementById('details-drawer');
     const overlay = document.getElementById('drawer-overlay');
@@ -935,8 +933,8 @@
     function showItinerary() {
       closeAllDrawers();
       itinPage.hidden = false;
-      document.body.classList.add('itin-is-open');
-      window.scrollTo(0, 0);
+      deviceFrame.classList.add('itin-is-open');
+      deviceFrame.scrollTo(0, 0);
     }
 
     generateBtn.addEventListener('click', showItinerary);

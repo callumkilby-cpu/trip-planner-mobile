@@ -483,7 +483,7 @@ body {
   z-index: 200;
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 100%;
   background: #ffffff;
   border-radius: 0;
   transform: translateY(100%);
@@ -493,7 +493,7 @@ body {
 
 #details-drawer {
   height: auto;
-  max-height: 100vh;
+  max-height: 100%;
   border-radius: 16px 16px 0 0;
 }
 
@@ -990,7 +990,7 @@ body.drawer-is-open {
 
 .itin-page {
   background: var(--cn-color-surface);
-  min-height: 100vh;
+  min-height: 100%;
 }
 
 .itin-page .site-header {
@@ -1075,7 +1075,7 @@ textarea.refine-chat-textarea {
   gap: 16px;
 }
 
-body.itin-is-open .itin-fabs {
+.device-frame.itin-is-open .itin-fabs {
   display: flex;
 }
 
@@ -1474,13 +1474,13 @@ body.map-is-open .itin-fabs {
 }
 
 
-body.itin-is-open > .site-header,
-body.itin-is-open > .hero-banner,
-body.itin-is-open > .page,
-body.itin-is-open > .sticky-cta-bar,
-body.itin-is-open > .drawer-overlay,
-body.itin-is-open > .drawer,
-body.itin-is-open > .site-footer {
+.device-frame.itin-is-open > .site-header,
+.device-frame.itin-is-open > .hero-banner,
+.device-frame.itin-is-open > .page,
+.device-frame.itin-is-open > .sticky-cta-bar,
+.device-frame.itin-is-open > .drawer-overlay,
+.device-frame.itin-is-open > .drawer,
+.device-frame.itin-is-open > .site-footer {
   display: none;
 }
 
