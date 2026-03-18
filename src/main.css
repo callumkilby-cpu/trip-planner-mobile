@@ -420,6 +420,14 @@ body {
   padding: 12px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   background: var(--cn-color-surface);
   border-top: 1px solid var(--cn-color-border);
+  transform: translateY(100%);
+  opacity: 0;
+  transition: transform 0.35s ease, opacity 0.3s ease;
+}
+
+.sticky-cta-bar.is-visible {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* utility/button-core – Primary button (filled, brand gold)
@@ -546,7 +554,12 @@ body {
   padding-bottom: 80px;
 }
 
-#trip-drawer .drawer-input-bar,
+#trip-drawer .drawer-input-bar {
+  background: #ffffff;
+  border-top: 1px solid var(--cn-color-border);
+  box-shadow: none;
+}
+
 #details-drawer .drawer-input-bar {
   background: transparent;
   border-top: none;
