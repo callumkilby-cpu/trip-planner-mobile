@@ -224,8 +224,8 @@ body {
 
 /* Article header */
 .article-header {
-  margin-left: calc(-50vw + 50%);
-  margin-right: calc(-50vw + 50%);
+  margin-left: -16px;
+  margin-right: -16px;
   padding: 2rem 16px;
   margin-bottom: 2rem;
   background: #000000;
@@ -244,12 +244,13 @@ body {
 
 .article-title {
   font-family: var(--cn-font-headline);
-  font-size: 30px;
+  font-size: 26px;
   font-weight: 500;
   line-height: 1.15;
   color: #ffffff;
   text-align: center;
   margin: 0 0 0.75rem;
+  overflow-wrap: break-word;
 }
 
 .dek {
