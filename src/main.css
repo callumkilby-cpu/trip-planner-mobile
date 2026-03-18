@@ -420,14 +420,6 @@ body {
   padding: 12px 16px calc(16px + env(safe-area-inset-bottom, 0px));
   background: var(--cn-color-surface);
   border-top: 1px solid var(--cn-color-border);
-  transform: translateY(100%);
-  opacity: 0;
-  transition: transform 0.35s ease, opacity 0.3s ease;
-}
-
-.sticky-cta-bar.is-visible {
-  transform: translateY(0);
-  opacity: 1;
 }
 
 /* utility/button-core – Primary button (filled, brand gold)
@@ -698,7 +690,7 @@ body {
 /* Vibes grid — 3 column */
 .vibes-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 6px;
   margin-bottom: 24px;
 }

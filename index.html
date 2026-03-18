@@ -836,17 +836,6 @@
       burger.setAttribute('aria-expanded', open);
     });
 
-    const ctaBar = document.querySelector('.sticky-cta-bar');
-    const trigger = document.querySelectorAll('.article-intro .cn-body-core')[1];
-    const scrollContainer = document.getElementById('device-scroll');
-    if (ctaBar && trigger && scrollContainer) {
-      scrollContainer.addEventListener('scroll', () => {
-        const frameRect = scrollContainer.getBoundingClientRect();
-        const triggerRect = trigger.getBoundingClientRect();
-        ctaBar.classList.toggle('is-visible', triggerRect.top < frameRect.bottom);
-      }, { passive: true });
-    }
-
     const deviceFrame = document.querySelector('.device-frame');
     const vibesDrawer = document.getElementById('trip-drawer');
     const detailsDrawer = document.getElementById('details-drawer');
