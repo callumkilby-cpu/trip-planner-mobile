@@ -1132,8 +1132,11 @@ body.map-is-open .itin-fabs {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 10;
+  z-index: 1000;
   padding: 12px 16px calc(12px + env(safe-area-inset-bottom, 0px));
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .map-chat-bar .chat-input-bar {
