@@ -13,6 +13,7 @@
 </head>
 <body>
 <div class="device-frame">
+<div class="device-scroll" id="device-scroll">
   <header class="site-header">
     <div class="header-inner">
       <a href="/" class="logo" aria-label="Condé Nast Traveller">
@@ -298,6 +299,13 @@
       </ol>
     </article>
   </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">Condé Nast Traveller</p>
+      <p class="footer-legal">© Condé Nast Britain 2026.</p>
+    </div>
+  </footer>
+</div>
 
   <div class="sticky-cta-bar">
     <button class="btn-primary btn-plan-trip" data-cn-token="utility/button-core">
@@ -819,12 +827,6 @@
     <div class="map-drawer-overlay" id="map-overlay"></div>
   </div>
 
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <p class="footer-brand">Condé Nast Traveller</p>
-      <p class="footer-legal">© Condé Nast Britain 2026.</p>
-    </div>
-  </footer>
   <script>
     const burger = document.querySelector('.burger');
     const nav = document.getElementById('main-nav');
@@ -836,7 +838,7 @@
 
     const ctaBar = document.querySelector('.sticky-cta-bar');
     const trigger = document.querySelectorAll('.article-intro .cn-body-core')[1];
-    const scrollContainer = document.querySelector('.device-frame');
+    const scrollContainer = document.getElementById('device-scroll');
     if (ctaBar && trigger && scrollContainer) {
       scrollContainer.addEventListener('scroll', () => {
         const frameRect = scrollContainer.getBoundingClientRect();
@@ -934,7 +936,7 @@
       closeAllDrawers();
       itinPage.hidden = false;
       deviceFrame.classList.add('itin-is-open');
-      deviceFrame.scrollTo(0, 0);
+      itinPage.scrollTo(0, 0);
     }
 
     generateBtn.addEventListener('click', showItinerary);
