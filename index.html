@@ -825,6 +825,42 @@
       </div>
     </div>
     <div class="map-drawer-overlay" id="map-overlay"></div>
+
+    <div class="hotel-detail-drawer" id="hotel-detail-drawer" aria-hidden="true">
+      <button class="hotel-detail-close" id="hotel-detail-close" aria-label="Close">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="hotel-detail-scroll">
+        <div class="hotel-detail-image-wrap">
+          <img class="hotel-detail-img" id="hotel-detail-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop" alt="Torel Palace" />
+        </div>
+        <div class="hotel-detail-image-meta">
+          <span class="hotel-detail-credit">Image Credit Courtesy of brand</span>
+          <div class="hotel-detail-dots">
+            <span class="hotel-dot is-active"></span>
+            <span class="hotel-dot"></span>
+            <span class="hotel-dot"></span>
+          </div>
+          <button class="hotel-detail-save" aria-label="Save">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </button>
+        </div>
+        <div class="hotel-detail-body">
+          <h2 class="hotel-detail-name" id="hotel-detail-name">Torel Palace</h2>
+          <div class="hotel-detail-awards">
+            <span class="hotel-detail-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg> Hot List 2025</span>
+            <span class="hotel-detail-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Readers' Choice Award 2025</span>
+          </div>
+          <p class="hotel-detail-desc">There's really no better address in Lisbon than the Torel Palace. Overlooking Parque Eduardo, which faces down towards the river, it's as close to a rural retreat as you'll find in the city centre. There's really no better address in Lisbon than the Torel Palace. Overlooking Parque Eduardo, which faces down towards the river...</p>
+          <a href="#" class="hotel-detail-review-link">Read full review <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="hotel-detail-footer">
+          <button class="hotel-detail-price-btn">From $132 / night</button>
+          <p class="hotel-detail-price-meta">Price for 8 - 10 Dec  Powered by Expedia</p>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-detail-overlay" id="hotel-detail-overlay"></div>
   </div>
 
   <script>
@@ -1100,6 +1136,39 @@
         var img = card.querySelector('.itin-stay-img');
         var title = card.querySelector('.itin-stay-name');
         openRefineForItem(img.src, title.textContent);
+      });
+    });
+
+    var hotelDetailDrawer = document.getElementById('hotel-detail-drawer');
+    var hotelDetailOverlay = document.getElementById('hotel-detail-overlay');
+    var hotelDetailClose = document.getElementById('hotel-detail-close');
+    var hotelDetailImg = document.getElementById('hotel-detail-img');
+    var hotelDetailName = document.getElementById('hotel-detail-name');
+
+    function openHotelDetail(imgSrc, name) {
+      hotelDetailImg.src = imgSrc;
+      hotelDetailImg.alt = name;
+      hotelDetailName.textContent = name;
+      hotelDetailDrawer.classList.add('is-open');
+      hotelDetailDrawer.setAttribute('aria-hidden', 'false');
+      hotelDetailOverlay.classList.add('is-active');
+    }
+
+    function closeHotelDetail() {
+      hotelDetailDrawer.classList.remove('is-open');
+      hotelDetailDrawer.setAttribute('aria-hidden', 'true');
+      hotelDetailOverlay.classList.remove('is-active');
+    }
+
+    hotelDetailClose.addEventListener('click', closeHotelDetail);
+    hotelDetailOverlay.addEventListener('click', closeHotelDetail);
+
+    itinPage.querySelectorAll('.itin-stay-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.itin-stay-refine')) return;
+        var img = card.querySelector('.itin-stay-img');
+        var title = card.querySelector('.itin-stay-name');
+        openHotelDetail(img.src, title.textContent);
       });
     });
 
