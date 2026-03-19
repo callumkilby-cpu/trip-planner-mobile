@@ -1993,6 +1993,8 @@ body.map-is-open .itin-fabs {
 .map-container {
   flex: 1;
   min-height: 0;
+  position: relative;
+  z-index: 0;
 }
 
 /* ── Map Markers ── */
