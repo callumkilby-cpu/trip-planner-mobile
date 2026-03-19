@@ -383,6 +383,94 @@ body {
   color: var(--cn-color-text-subtle);
 }
 
+/* Destination Cards */
+.dest-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  padding: 8px 0 32px;
+}
+
+.dest-card {
+  background: var(--cn-color-surface);
+  overflow: hidden;
+}
+
+.dest-card-image-wrap {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+}
+
+.dest-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.dest-card-body {
+  padding: 20px 0 0;
+}
+
+.dest-card-title {
+  font-family: var(--cn-font-headline);
+  font-size: 1.625rem;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--cn-color-text-heading);
+  margin: 0 0 8px;
+}
+
+.dest-card-address {
+  font-family: var(--cn-font-ui);
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--cn-color-text-subtle);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+.dest-card-awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding-top: 4px;
+  border-top: 1px solid var(--cn-color-border);
+  padding-top: 12px;
+}
+
+.dest-card-award {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--cn-font-ui);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--cn-color-brand);
+}
+
+.dest-card-award svg {
+  flex-shrink: 0;
+  color: var(--cn-color-brand);
+}
+
+.dest-card-desc {
+  font-family: var(--cn-font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--cn-color-text);
+  margin: 0;
+  padding-top: 4px;
+  border-top: 1px solid var(--cn-color-border);
+  padding-top: 12px;
+}
+
 /* Footer */
 .site-footer {
   border-top: 1px solid var(--cn-color-border);
