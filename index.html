@@ -671,17 +671,17 @@
     const ctaBar = document.querySelector('.sticky-cta-bar');
     const introParas = document.querySelectorAll('.article-intro .cn-body-core');
     const scrollContainer = document.getElementById('device-scroll');
-    if (ctaBar && introParas.length && scrollContainer) {
-      const lastIntroPara = introParas[introParas.length - 1];
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            ctaBar.classList.toggle('is-visible', !entry.isIntersecting);
-          });
-        },
-        { root: scrollContainer, rootMargin: '0px', threshold: 0 }
-      );
-      observer.observe(lastIntroPara);
+    if (ctaBar && introParas.length >= 2 && scrollContainer) {
+      const secondPara = introParas[1];
+      const checkCta = () => {
+        const root = scrollContainer.getBoundingClientRect();
+        const second = secondPara.getBoundingClientRect();
+        const scrolled = scrollContainer.scrollTop > 0;
+        const secondBottomInView = second.bottom <= root.bottom;
+        if (scrolled && secondBottomInView) ctaBar.classList.add('is-visible');
+      };
+      scrollContainer.addEventListener('scroll', checkCta, { passive: true });
+      checkCta();
     }
 
     const deviceFrame = document.querySelector('.device-frame');
