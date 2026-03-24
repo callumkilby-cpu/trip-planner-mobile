@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build:github-pages": "vite build --base=/trip-planner-mobile/paris-hotels-mobile/ --outDir ../dist/paris-hotels-mobile --emptyOutDir",
     "build:cnt-github": "vite build --base=/cnt-hotel-comparison-mobile/places-to-stay/paris-hotels/",
     "preview": "vite preview"
   },

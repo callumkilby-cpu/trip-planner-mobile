@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && npm run build:paris-github-pages",
+    "build:paris-github-pages": "npm ci --prefix paris-hotels-mobile && npm run build:github-pages --prefix paris-hotels-mobile",
     "preview": "vite preview"
   },
   "devDependencies": {
