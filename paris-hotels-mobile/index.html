@@ -1,0 +1,1141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The best hotels in Paris | Condé Nast Traveller</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script type="module" src="/src/main.js"></script>
+</head>
+<body>
+<div class="device-frame">
+<div class="device-scroll" id="device-scroll">
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="/" class="logo" aria-label="Condé Nast Traveller">
+        <img src="images/cn-traveller-logo.svg" alt="Condé Nast Traveller" class="logo-img" />
+      </a>
+      <button class="burger" aria-label="Menu" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
+      <nav class="nav" id="main-nav">
+        <a href="#">Destinations</a>
+        <a href="#">Places to Stay</a>
+        <a href="#">Style & Culture</a>
+        <a href="#">Food & Drinks</a>
+        <a href="#">News & Advice</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero-banner">
+    <figure class="hero-figure hero-figure--double-fill">
+      <img src="images/paris-hero-crillon-concorde.png" alt="Hôtel de Crillon and Place de la Concorde at twilight, Paris" class="hero-image" width="1024" height="575" />
+    </figure>
+  </section>
+
+  <main class="page">
+    <article class="gallery-article">
+      <header class="article-header">
+        <p class="rubric">Places to Stay</p>
+        <h1 class="article-title">The best hotels in Paris</h1>
+        <p class="dek">The best hotels in Paris, chosen by Condé Nast Traveller editors—from boutique boltholes to palace-status grande dames</p>
+        <p class="byline">By Sarah James</p>
+        <time class="pubdate" datetime="2025-10-15">15 October 2025</time>
+      </header>
+
+      <div class="article-intro">
+        <p class="cn-body-core" data-cn-token="consumptionEditorial/body-core">Trust the Parisians to lead the charge when it comes to the most glamorous and stylish hotels in the world. Amongst its majestic boulevards and hidden within its romantic arrondissements are an incredible collection of hotels that are destinations in their own right.</p>
+        <p class="cn-body-core" data-cn-token="consumptionEditorial/body-core">Names like The Ritz, Hôtel Plaza Athénée and Hôtel de Crillon are gilded landmarks, famed for attracting royals and movie stars. Then there are romantic boutique boltholes in townhouses, decorated with a fantastical <em>jeu de vivre</em> that one can only find in Paris. Plan wisely—and take our editors' advice—and a perfect stay is well within reach.</p>
+        <p class="cn-body-core article-source-note" style="margin-top:1.25rem;padding-top:1.25rem;border-top:1px solid var(--cn-color-border);text-align:center;font-size:0.9375rem"><a href="https://www.cntraveller.com/gallery/paris-hotels" class="gallery-item-cta" target="_blank" rel="noopener noreferrer">Read the full gallery on Condé Nast Traveller</a></p>
+      </div>
+
+      <div class="dest-cards">
+        <article class="dest-card">
+          <div class="dest-card-image-wrap">
+            <img class="dest-card-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&h=500&fit=crop" alt="La Réserve Paris Hotel and Spa" />
+          </div>
+          <div class="dest-card-body">
+            <h2 class="dest-card-title">La Réserve Paris Hotel and Spa</h2>
+            <p class="dest-card-address">42 Av. Gabriel, 75008 Paris, France</p>
+            <div class="dest-card-awards">
+              <span class="dest-card-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5C7 4 7 7 12 7s5-3 7.5-3a2.5 2.5 0 0 1 0 5H18"/><path d="m18 15-6-6-6 6"/><path d="M12 9v12"/></svg> Gold List 2026</span>
+              <span class="dest-card-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Readers' Choice</span>
+            </div>
+            <p class="dest-card-desc">With just 40 rooms, La Réserve is by far the smallest of the city’s palace-designated hotels, and retains a discreet residential quality—silk, velvet, Versailles-style parquet, and views from Notre-Dame to the Eiffel Tower.</p>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-card-image-wrap">
+            <img class="dest-card-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=500&fit=crop" alt="Le Bristol Paris" />
+          </div>
+          <div class="dest-card-body">
+            <h2 class="dest-card-title">Le Bristol Paris</h2>
+            <p class="dest-card-address">112 Rue du Faubourg Saint-Honoré, 75008 Paris, France</p>
+            <div class="dest-card-awards">
+              <span class="dest-card-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg> Hot List</span>
+            </div>
+            <p class="dest-card-desc">Grand, storied and luxurious—from the marble lobby’s vast flower arrangements to the rooftop pool and three Michelin-starred Epicure. Le Bristol celebrates a century of Parisian allure in 2025.</p>
+          </div>
+        </article>
+
+        <article class="dest-card">
+          <div class="dest-card-image-wrap">
+            <img class="dest-card-img" src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=800&h=500&fit=crop" alt="Le Grand Mazarin, Paris" />
+          </div>
+          <div class="dest-card-body">
+            <h2 class="dest-card-title">Le Grand Mazarin</h2>
+            <p class="dest-card-address">17 Rue de la Verrerie, 75004 Paris, France</p>
+            <p class="dest-card-desc">Martin Brudnizki’s Marais fantasy: a glass atrium winter garden, a rare indoor pool, and Boubalé’s Ashkenazi-tinged menu—boutique Paris at its most seductive.</p>
+          </div>
+        </article>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p class="footer-brand">Condé Nast Traveller</p>
+      <p class="footer-legal">© Condé Nast Britain 2026.</p>
+    </div>
+  </footer>
+</div>
+
+  <div class="sticky-cta-bar sticky-cta-bar--split">
+    <button type="button" class="btn-cta-split btn-cta-split--map btn-gallery-map" data-cn-token="utility/button-core" aria-label="Map view">
+      <svg class="btn-cta-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      <span class="btn-cta-split-label">Map View</span>
+    </button>
+    <button type="button" class="btn-cta-split btn-cta-split--filter btn-gallery-filter" data-cn-token="utility/button-core" aria-label="Filter hotels">
+      <svg class="btn-cta-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"/></svg>
+      <span class="btn-cta-split-label">Filter</span>
+    </button>
+  </div>
+
+    <div class="map-drawer" id="map-drawer" aria-hidden="true">
+      <div class="map-drawer-header">
+        <h3 class="map-drawer-title">Paris hotels map</h3>
+        <button type="button" class="map-drawer-close" aria-label="Close map">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div id="itin-map" class="map-container"></div>
+    </div>
+    <div class="map-drawer-overlay" id="map-overlay"></div>
+
+  <div class="drawer-overlay" id="hotel-filter-overlay"></div>
+  <div class="drawer" id="hotel-filter-drawer" aria-hidden="true">
+    <header class="drawer-header">
+      <span class="drawer-header-spacer" aria-hidden="true"></span>
+      <span class="drawer-title-bar">Filter hotels</span>
+      <button type="button" class="drawer-close hotel-filter-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+    </header>
+    <div class="drawer-body hotel-filter-drawer-body">
+      <p class="drawer-dek hotel-filter-dek">Narrow down Paris stays by price, area, and what matters to you.</p>
+
+      <section class="filter-section" aria-labelledby="filter-price-label">
+        <h3 class="filter-section-label" id="filter-price-label">Price per night</h3>
+        <div class="filter-chip-row" role="group" aria-label="Price per night">
+          <button type="button" class="filter-chip" data-filter="price" aria-pressed="false">Under £200</button>
+          <button type="button" class="filter-chip" data-filter="price" aria-pressed="false">£200 – £400</button>
+          <button type="button" class="filter-chip" data-filter="price" aria-pressed="false">£400 – £800</button>
+          <button type="button" class="filter-chip" data-filter="price" aria-pressed="false">£800+</button>
+        </div>
+      </section>
+
+      <section class="filter-section" aria-labelledby="filter-rating-label">
+        <h3 class="filter-section-label" id="filter-rating-label">Guest rating</h3>
+        <div class="filter-chip-row" role="group" aria-label="Guest rating">
+          <button type="button" class="filter-chip" data-filter="rating" aria-pressed="false">8+ Very good</button>
+          <button type="button" class="filter-chip" data-filter="rating" aria-pressed="false">9+ Superb</button>
+        </div>
+      </section>
+
+      <section class="filter-section" aria-labelledby="filter-area-label">
+        <h3 class="filter-section-label" id="filter-area-label">Neighbourhood</h3>
+        <div class="filter-chip-row filter-chip-row--wrap" role="group" aria-label="Neighbourhood">
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Marais</button>
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Saint-Germain</button>
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Champs-Élysées</button>
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Louvre–Opéra</button>
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Montmartre</button>
+          <button type="button" class="filter-chip" data-filter="area" aria-pressed="false">Latin Quarter</button>
+        </div>
+      </section>
+
+      <section class="filter-section" aria-labelledby="filter-amenity-label">
+        <h3 class="filter-section-label" id="filter-amenity-label">Amenities</h3>
+        <div class="filter-chip-row filter-chip-row--wrap" role="group" aria-label="Amenities">
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Pool</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Spa</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Gym</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Restaurant</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Free Wi‑Fi</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Family rooms</button>
+          <button type="button" class="filter-chip" data-filter="amenity" aria-pressed="false">Pet friendly</button>
+        </div>
+      </section>
+
+      <section class="filter-section" aria-labelledby="filter-type-label">
+        <h3 class="filter-section-label" id="filter-type-label">Property type</h3>
+        <div class="filter-chip-row" role="group" aria-label="Property type">
+          <button type="button" class="filter-chip" data-filter="type" aria-pressed="false">Hotel</button>
+          <button type="button" class="filter-chip" data-filter="type" aria-pressed="false">Boutique</button>
+          <button type="button" class="filter-chip" data-filter="type" aria-pressed="false">Palace</button>
+        </div>
+      </section>
+    </div>
+    <div class="hotel-filter-footer">
+      <button type="button" class="btn-filter-clear" id="btn-filter-clear">Clear all</button>
+      <button type="button" class="btn-filter-results btn-primary" id="btn-filter-results" data-cn-token="utility/button-core">Show results</button>
+    </div>
+  </div>
+
+  <div class="drawer-overlay" id="drawer-overlay"></div>
+  <div class="drawer" id="trip-drawer" aria-hidden="true">
+    <header class="drawer-header">
+      <button class="drawer-back" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="drawer-title-bar">Plan your Paris stay</span>
+      <button class="drawer-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <div class="drawer-body">
+      <h3 class="drawer-section-label">Choose your stay style</h3>
+      <p class="drawer-dek">Select what matters most for your Paris hotels shortlist. We'll use this to shape your personalised stay and itinerary.</p>
+      <div class="vibes-grid">
+        <button class="vibe-card" data-vibe="palace-luxury">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Palace luxury</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="boutique-bolthole">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1445019980597-93fa8acb246c?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Boutique bolthole</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="eiffel-views">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1502602898657-3e91760cbb89?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Eiffel views</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="family-friendly">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Family friendly</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="left-bank">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Left Bank charm</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="marais">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1503917985288-6dbf322186e7?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Marais &amp; design</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="spa-wellness">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Spa &amp; wellness</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="rooftop-bar">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Rooftop &amp; scene</span>
+          <span class="vibe-check"></span>
+        </button>
+        <button class="vibe-card" data-vibe="smart-stay">
+          <span class="vibe-img" style="background-image:url('https://images.unsplash.com/photo-1590490360182-c33d57733427?w=320&h=400&fit=crop')"></span>
+          <span class="vibe-label">Smart affordable</span>
+          <span class="vibe-check"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="drawer-input-bar">
+      <button class="btn-next-drawer" data-cn-token="utility/button-core">Add trip vibes</button>
+    </div>
+  </div>
+
+  <div class="drawer" id="details-drawer" aria-hidden="true">
+    <header class="drawer-header">
+      <button class="drawer-back details-back" aria-label="Back">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+      </button>
+      <span class="drawer-title-bar">Plan your Paris stay</span>
+      <button class="drawer-close details-close" aria-label="Close">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18"/><path d="M6 6l12 12"/></svg>
+      </button>
+    </header>
+
+    <div class="drawer-body">
+      <h3 class="drawer-section-label">Your vibes</h3>
+      <div class="selected-vibes" id="selected-vibes"></div>
+
+      <h3 class="drawer-section-label">Add dates</h3>
+      <div class="dates-section" id="dates-section">
+        <div class="details-toggle-row" id="dates-toggle-row">
+          <button class="details-toggle-btn" data-dates="specific">Specific dates</button>
+          <button class="details-toggle-btn" data-dates="flexible">Flexible dates</button>
+        </div>
+        <div class="dates-picker" id="dates-picker" hidden>
+          <div class="dates-picker-fields">
+            <div class="dates-field">
+              <label class="dates-field-label" for="start-date">Start date</label>
+              <input type="date" class="dates-field-input" id="start-date" />
+            </div>
+            <div class="dates-field">
+              <label class="dates-field-label" for="end-date">End date</label>
+              <input type="date" class="dates-field-input" id="end-date" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h3 class="drawer-section-label">Describe your perfect trip</h3>
+      <div class="drawer-input-wrap">
+        <svg class="drawer-input-sparkle" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+          <path d="M20 3v4"/><path d="M22 5h-4"/>
+          <path d="M4 17v2"/><path d="M5 18H3"/>
+        </svg>
+        <textarea class="drawer-input" rows="5" placeholder="Tell us about your Paris stay—arrondissement, budget, must-have amenities, and any hotels you’re considering"></textarea>
+      </div>
+    </div>
+
+    <div class="drawer-input-bar">
+      <button class="btn-build-itinerary" data-cn-token="utility/button-core">Build your itinerary</button>
+    </div>
+  </div>
+
+  <div class="itin-page" id="itinerary-page" hidden>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="/" class="logo" aria-label="Condé Nast Traveller">
+          <img src="images/cn-traveller-logo.svg" alt="Condé Nast Traveller" class="logo-img" />
+        </a>
+        <button class="burger" aria-label="Menu" aria-expanded="false">
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+          <span class="burger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <div class="itin-hero-banner">
+      <img class="itin-hero-img" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb89?w=800&h=500&fit=crop" alt="Paris skyline" />
+    </div>
+
+    <div class="itin-intro">
+      <div class="itin-intro-avatar">
+        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=200&h=200&fit=crop" alt="Paris" />
+      </div>
+      <h2 class="itin-intro-heading">Your Paris itinerary</h2>
+      <p class="itin-intro-dates">October 16 – October 19 2025</p>
+      <div class="itin-intro-actions">
+        <button class="itin-btn-edit">Edit Dates</button>
+        <button class="itin-btn-save" aria-label="Save itinerary">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M12 7v6"/><path d="M9 10h6"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="itin-content">
+
+      <section class="itin-section">
+        <h3 class="itin-section-heading">Your stay</h3>
+        <div class="itin-stay-card">
+          <div class="itin-stay-hero">
+            <img class="itin-stay-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=500&fit=crop" alt="Le Bristol Paris" />
+            <span class="itin-stay-tag">Palace luxury</span>
+          </div>
+          <div class="itin-stay-info">
+            <div class="itin-stay-header">
+              <h4 class="itin-stay-name">Le Bristol Paris</h4>
+              <a href="#" class="itin-stay-refine">Refine</a>
+            </div>
+            <p class="itin-stay-award">
+              <svg class="itin-award-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg>
+              Hot List
+            </p>
+            <p class="itin-stay-desc">Grand, storied Faubourg Saint-Honoré perfection—Epicure’s three stars, a rooftop pool above the city, and a courtyard that feels like a shared secret with Paris itself.</p>
+            <div class="itin-stay-author">
+              <img class="itin-author-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Abigail Malbon" />
+              <div class="itin-author-info">
+                <span class="itin-author-name">Abigail Malbon, Condé Nast Traveller</span>
+                <a href="https://www.cntraveller.com/gallery/paris-hotels" class="itin-author-link" target="_blank" rel="noopener noreferrer">See the full Paris hotels list</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="itin-section">
+        <h3 class="itin-section-heading">Your itinerary</h3>
+
+        <div class="itin-day-tabs">
+          <button class="itin-day-pill is-active" data-day="1">Oct 16</button>
+          <button class="itin-day-pill" data-day="2">Oct 17</button>
+          <button class="itin-day-pill" data-day="3">Oct 18</button>
+          <button class="itin-day-pill" data-day="4">Oct 19</button>
+        </div>
+
+        <div class="itin-day-panel is-active" data-day-panel="1">
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a?w=800&h=500&fit=crop" alt="Seine and Notre-Dame" />
+              <span class="itin-item-tag">Arrive in style</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Seine stroll &amp; Île de la Cité</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 1st arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Afternoon</span>
+              </div>
+              <p class="itin-item-desc">Check in near the Golden Triangle, then walk the banks of the Seine toward Notre-Dame and the flower market—an easy first taste of classic Paris.</p>
+              <div class="itin-item-author">
+                <img class="itin-author-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah James" />
+                <div class="itin-author-info">
+                  <span class="itin-author-name">Sarah James, Condé Nast Traveller</span>
+                  <a href="https://www.cntraveller.com/gallery/paris-hotels" class="itin-author-link" target="_blank" rel="noopener noreferrer">Paris hotels guide</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1559339352-11d035aa65de?w=800&h=500&fit=crop" alt="Marais streets" />
+              <span class="itin-item-tag">Boutique Paris</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Marais galleries &amp; cafés</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 3rd &amp; 4th</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Late afternoon</span>
+              </div>
+              <p class="itin-item-desc">Wind through the Marais’s cobbles—concept shops, small museums, and wine bars—before dinner near the BHV or Place des Vosges.</p>
+              <div class="itin-item-author">
+                <img class="itin-author-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah James" />
+                <div class="itin-author-info">
+                  <span class="itin-author-name">Sarah James, Condé Nast Traveller</span>
+                  <a href="#" class="itin-author-link">Find out more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800&h=500&fit=crop" alt="Evening in Paris" />
+              <span class="itin-item-tag">Left Bank</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Saint-Germain apéro</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 6th arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Evening</span>
+              </div>
+              <p class="itin-item-desc">Cross the river for a brasserie or natural-wine bar in Saint-Germain—close to many of our favourite Left Bank stays.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="itin-day-panel" data-day-panel="2">
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1549144516-f43e0ce44309?w=800&h=500&fit=crop" alt="Louvre" />
+              <span class="itin-item-tag">Culture</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Louvre &amp; Tuileries</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 1st arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Morning</span>
+              </div>
+              <p class="itin-item-desc">Start early at the world’s busiest museum, then decompress with a walk through the Tuileries—Le Meurice and other palace hotels sit right on the garden’s edge.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb89?w=800&h=500&fit=crop" alt="Eiffel Tower" />
+              <span class="itin-item-tag">Iconic views</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Eiffel Tower golden hour</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 7th arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Evening</span>
+              </div>
+              <p class="itin-item-desc">Champ de Mars at dusk, then back to a room with an Eiffel view—our list includes Hôtel Plaza Athénée and other Montaigne favourites.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="itin-day-panel" data-day-panel="3">
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1502602898657-3e91760cbb89?w=800&h=500&fit=crop" alt="Montmartre" />
+              <span class="itin-item-tag">Village Paris</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Montmartre morning</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 18th arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Morning</span>
+              </div>
+              <p class="itin-item-desc">Climb to Sacré-Cœur before the crowds, then wind down through Rue des Abbesses—our affordable picks like Hotel Rochechouart put you near the action.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=500&fit=crop" alt="Arc de Triomphe" />
+              <span class="itin-item-tag">Golden Triangle</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Champs-Élysées to Arc</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 8th arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Afternoon</span>
+              </div>
+              <p class="itin-item-desc">Shopping and galleries between George V and the Arc—home turf for Cheval Blanc, Four Seasons George V, and Bulgari Hotel Paris.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="itin-day-panel" data-day-panel="4">
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1565008576549-57569a49371d?w=800&h=500&fit=crop" alt="Place Vendôme" />
+              <span class="itin-item-tag">Grand Paris</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Place Vendôme &amp; Opéra</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 1st &amp; 2nd</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Morning</span>
+              </div>
+              <p class="itin-item-desc">Window-shop the maisons, pause at The Ritz Paris or 1, Place Vendôme, then a matinee at Palais Garnier if you’ve booked ahead.</p>
+              <div class="itin-item-author">
+                <img class="itin-author-avatar" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&h=80&fit=crop&crop=face" alt="Sarah James" />
+                <div class="itin-author-info">
+                  <span class="itin-author-name">Sarah James, Condé Nast Traveller</span>
+                  <a href="#" class="itin-author-link">Find out more</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="itin-item">
+            <div class="itin-item-hero">
+              <img class="itin-item-img" src="https://images.unsplash.com/photo-1559564486-4192c9c9d1f5?w=800&h=500&fit=crop" alt="Canal Saint-Martin" />
+              <span class="itin-item-tag">Farewell</span>
+            </div>
+            <div class="itin-item-info">
+              <div class="itin-item-header">
+                <h4 class="itin-item-title">Canal Saint-Martin</h4>
+                <a href="#" class="itin-item-replace">Refine</a>
+              </div>
+              <div class="itin-item-meta">
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> 10th arr.</span>
+                <span class="itin-item-meta-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Afternoon</span>
+              </div>
+              <p class="itin-item-desc">A relaxed last walk along the canal—coffee, pastries, and people-watching before you head to CDG or Gare du Nord.</p>
+              <a href="#" class="itin-author-link">Find out more</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="itin-fabs">
+      <button class="itin-fab itin-fab-refine" id="btn-refine-itin" aria-label="Refine itinerary">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/>
+          <path d="M20 3v4"/><path d="M22 5h-4"/>
+          <path d="M4 17v2"/><path d="M5 18H3"/>
+        </svg>
+      </button>
+      <button class="itin-fab itin-fab-map" id="btn-map-itin" aria-label="View map">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
+      </button>
+    </div>
+
+    <div class="refine-drawer" id="refine-drawer" aria-hidden="true">
+      <div class="refine-drawer-header">
+        <h3 class="refine-drawer-title">Refine your itinerary</h3>
+        <button class="refine-drawer-close" aria-label="Close">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="refine-drawer-body">
+        <div class="refine-preview" id="refine-preview" hidden>
+          <img class="refine-preview-img" id="refine-preview-img" src="" alt="" />
+          <span class="refine-preview-title" id="refine-preview-title"></span>
+        </div>
+        <p class="refine-prompt" id="refine-prompt" hidden></p>
+        <div class="refine-suggestions" id="refine-suggestions" hidden>
+          <p class="refine-suggestions-heading">What are you looking for from your stay?</p>
+          <div class="refine-pills">
+            <button class="refine-pill">Closer to the city centre</button>
+            <button class="refine-pill">With a pool</button>
+            <button class="refine-pill">Something more family-friendly</button>
+          </div>
+        </div>
+
+        <div class="refine-results" id="refine-results" hidden>
+          <p class="refine-suggestions-heading">What are you looking for from your stay?</p>
+          <div class="refine-selected-pill" id="refine-selected-pill"></div>
+          <p class="refine-results-intro" id="refine-results-intro"></p>
+
+          <div class="refine-hotel-carousel">
+            <div class="refine-hotel-card refine-hotel-top-pick">
+              <span class="refine-hotel-badge">Our Top Pick</span>
+              <img class="refine-hotel-img" src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=400&fit=crop" alt="La Réserve Paris" />
+              <div class="refine-hotel-info">
+                <h4 class="refine-hotel-name">La Réserve Paris</h4>
+                <p class="refine-hotel-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg> HOT LIST 2025</p>
+                <div class="refine-hotel-meta">
+                  <span class="refine-hotel-rating"><strong>8.4</strong> Great (473)</span>
+                  <span class="refine-hotel-amenities">Free Wi-Fi · Pool · Views</span>
+                </div>
+                <div class="refine-hotel-pricing">
+                  <div class="refine-hotel-price">
+                    <span class="refine-hotel-price-main">$222</span><span class="refine-hotel-price-unit"> /night</span>
+                    <span class="refine-hotel-price-total">$666 total for 4 nights</span>
+                  </div>
+                  <button class="refine-hotel-add">ADD TO TRIP</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="refine-hotel-card refine-hotel-top-pick">
+              <span class="refine-hotel-badge">Seine &amp; Samaritaine</span>
+              <img class="refine-hotel-img" src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=600&h=400&fit=crop" alt="Cheval Blanc Paris" />
+              <div class="refine-hotel-info">
+                <h4 class="refine-hotel-name">Cheval Blanc Paris</h4>
+                <p class="refine-hotel-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg> HOT LIST 2025</p>
+                <div class="refine-hotel-meta">
+                  <span class="refine-hotel-rating"><strong>8.4</strong> Great (312)</span>
+                  <span class="refine-hotel-amenities">Free Wi-Fi · Pool · Spa</span>
+                </div>
+                <div class="refine-hotel-pricing">
+                  <div class="refine-hotel-price">
+                    <span class="refine-hotel-price-main">$222</span><span class="refine-hotel-price-unit"> /night</span>
+                    <span class="refine-hotel-price-total">$666 total for 4 nights</span>
+                  </div>
+                  <button class="refine-hotel-add">ADD TO TRIP</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="refine-drawer-footer">
+        <div class="chat-input-bar">
+          <textarea class="chat-input refine-chat-textarea" id="refine-chat-input" rows="4" placeholder="Tell us what you'd like to change..."></textarea>
+          <button class="chat-send" aria-label="Send">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"/><polyline points="5 12 12 5 19 12"/></svg>
+          </button>
+        </div>
+        <p class="refine-disclaimer">AI-generated suggestions. Please verify details before booking.</p>
+      </div>
+    </div>
+    <div class="refine-overlay" id="refine-overlay"></div>
+
+    <div class="hotel-detail-drawer" id="hotel-detail-drawer" aria-hidden="true">
+      <button class="hotel-detail-close" id="hotel-detail-close" aria-label="Close">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="hotel-detail-scroll">
+        <div class="hotel-detail-image-wrap">
+          <img class="hotel-detail-img" id="hotel-detail-img" src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&h=500&fit=crop" alt="Le Bristol Paris" />
+        </div>
+        <div class="hotel-detail-image-meta">
+          <div class="hotel-detail-dots">
+            <span class="hotel-dot is-active"></span>
+            <span class="hotel-dot"></span>
+            <span class="hotel-dot"></span>
+          </div>
+          <button class="hotel-detail-save" aria-label="Save">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </button>
+        </div>
+        <div class="hotel-detail-body">
+          <h2 class="hotel-detail-name" id="hotel-detail-name">Le Bristol Paris</h2>
+          <div class="hotel-detail-awards">
+            <span class="hotel-detail-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 L15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26Z"/></svg> Hot List 2025</span>
+            <span class="hotel-detail-award"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg> Readers' Choice Award 2025</span>
+          </div>
+          <p class="hotel-detail-desc">On Faubourg Saint-Honoré, Le Bristol pairs marble-and-flower opulence with a rooftop pool and Epicure’s three Michelin stars—a benchmark Paris palace stay, as featured in our Paris hotels gallery.</p>
+          <a href="https://www.cntraveller.com/gallery/paris-hotels" class="hotel-detail-review-link" target="_blank" rel="noopener noreferrer">Read on CN Traveller <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg></a>
+        </div>
+        <div class="hotel-detail-footer">
+          <button class="hotel-detail-price-btn">From $132 / night</button>
+          <p class="hotel-detail-price-meta">Price for 8 - 10 Dec  Powered by Expedia</p>
+        </div>
+      </div>
+    </div>
+    <div class="hotel-detail-overlay" id="hotel-detail-overlay"></div>
+  </div>
+
+  <script>
+    const burger = document.querySelector('.burger');
+    const nav = document.getElementById('main-nav');
+    burger.addEventListener('click', () => {
+      const open = nav.classList.toggle('nav--open');
+      burger.classList.toggle('burger--open', open);
+      burger.setAttribute('aria-expanded', open);
+    });
+
+    const ctaBar = document.querySelector('.sticky-cta-bar');
+    const introParas = document.querySelectorAll('.article-intro .cn-body-core');
+    const scrollContainer = document.getElementById('device-scroll');
+    if (ctaBar && introParas.length >= 2 && scrollContainer) {
+      const secondPara = introParas[1];
+      const checkCta = () => {
+        const root = scrollContainer.getBoundingClientRect();
+        const second = secondPara.getBoundingClientRect();
+        const scrolled = scrollContainer.scrollTop > 0;
+        const secondBottomInView = second.bottom <= root.bottom;
+        if (scrolled && secondBottomInView) ctaBar.classList.add('is-visible');
+      };
+      scrollContainer.addEventListener('scroll', checkCta, { passive: true });
+      checkCta();
+    }
+
+    const deviceFrame = document.querySelector('.device-frame');
+    const vibesDrawer = document.getElementById('trip-drawer');
+    const detailsDrawer = document.getElementById('details-drawer');
+    const overlay = document.getElementById('drawer-overlay');
+    const hotelFilterDrawer = document.getElementById('hotel-filter-drawer');
+    const hotelFilterOverlay = document.getElementById('hotel-filter-overlay');
+    const btnGalleryMap = document.querySelector('.btn-gallery-map');
+    const btnGalleryFilter = document.querySelector('.btn-gallery-filter');
+    const nextBtn = document.querySelector('.btn-next-drawer');
+
+    function openVibesDrawer() {
+      closeHotelFilterDrawer();
+      vibesDrawer.classList.add('is-open');
+      vibesDrawer.setAttribute('aria-hidden', 'false');
+      overlay.classList.add('is-active');
+      document.body.classList.add('drawer-is-open');
+    }
+
+    function openHotelFilterDrawer() {
+      closeMap();
+      vibesDrawer.classList.remove('is-open');
+      vibesDrawer.setAttribute('aria-hidden', 'true');
+      detailsDrawer.classList.remove('is-open');
+      detailsDrawer.setAttribute('aria-hidden', 'true');
+      overlay.classList.remove('is-active');
+      hotelFilterDrawer.classList.add('is-open');
+      hotelFilterDrawer.setAttribute('aria-hidden', 'false');
+      hotelFilterOverlay.classList.add('is-active');
+      document.body.classList.add('drawer-is-open');
+    }
+
+    function closeHotelFilterDrawer() {
+      hotelFilterDrawer.classList.remove('is-open');
+      hotelFilterDrawer.setAttribute('aria-hidden', 'true');
+      hotelFilterOverlay.classList.remove('is-active');
+    }
+
+    function closeAllDrawers() {
+      closeHotelFilterDrawer();
+      vibesDrawer.classList.remove('is-open');
+      vibesDrawer.setAttribute('aria-hidden', 'true');
+      detailsDrawer.classList.remove('is-open');
+      detailsDrawer.setAttribute('aria-hidden', 'true');
+      overlay.classList.remove('is-active');
+      document.body.classList.remove('drawer-is-open');
+    }
+
+    function populateVibePills() {
+      var container = document.getElementById('selected-vibes');
+      container.innerHTML = '';
+      vibesDrawer.querySelectorAll('.vibe-card[aria-pressed="true"]').forEach(function (card) {
+        var label = card.querySelector('.vibe-label').textContent;
+        var pill = document.createElement('span');
+        pill.className = 'selected-vibe-pill';
+        pill.textContent = label;
+        container.appendChild(pill);
+      });
+    }
+
+    function openDetailsDrawer() {
+      populateVibePills();
+      vibesDrawer.classList.remove('is-open');
+      vibesDrawer.setAttribute('aria-hidden', 'true');
+      detailsDrawer.classList.add('is-open');
+      detailsDrawer.setAttribute('aria-hidden', 'false');
+    }
+
+    function backToVibes() {
+      detailsDrawer.classList.remove('is-open');
+      detailsDrawer.setAttribute('aria-hidden', 'true');
+      vibesDrawer.classList.add('is-open');
+      vibesDrawer.setAttribute('aria-hidden', 'false');
+    }
+
+    if (btnGalleryMap) btnGalleryMap.addEventListener('click', openMap);
+    if (btnGalleryFilter) btnGalleryFilter.addEventListener('click', openHotelFilterDrawer);
+    hotelFilterDrawer.querySelector('.hotel-filter-close').addEventListener('click', closeAllDrawers);
+    hotelFilterOverlay.addEventListener('click', closeAllDrawers);
+    document.getElementById('btn-filter-results').addEventListener('click', closeAllDrawers);
+    document.getElementById('btn-filter-clear').addEventListener('click', function () {
+      hotelFilterDrawer.querySelectorAll('.filter-chip').forEach(function (chip) {
+        chip.setAttribute('aria-pressed', 'false');
+      });
+    });
+    hotelFilterDrawer.querySelectorAll('.filter-chip').forEach(function (chip) {
+      chip.addEventListener('click', function () {
+        var pressed = chip.getAttribute('aria-pressed') === 'true';
+        chip.setAttribute('aria-pressed', String(!pressed));
+      });
+    });
+    vibesDrawer.querySelector('.drawer-close').addEventListener('click', closeAllDrawers);
+    vibesDrawer.querySelector('.drawer-back').addEventListener('click', closeAllDrawers);
+    overlay.addEventListener('click', closeAllDrawers);
+    nextBtn.addEventListener('click', openDetailsDrawer);
+    detailsDrawer.querySelector('.details-close').addEventListener('click', closeAllDrawers);
+    detailsDrawer.querySelector('.details-back').addEventListener('click', backToVibes);
+
+    vibesDrawer.querySelectorAll('.vibe-card').forEach((card) => {
+      card.setAttribute('aria-pressed', 'false');
+      card.addEventListener('click', () => {
+        const pressed = card.getAttribute('aria-pressed') === 'true';
+        card.setAttribute('aria-pressed', String(!pressed));
+      });
+    });
+
+    var datesToggles = detailsDrawer.querySelectorAll('.details-toggle-btn');
+    var datesToggleRow = document.getElementById('dates-toggle-row');
+    var datesPicker = document.getElementById('dates-picker');
+
+    datesToggles.forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        if (btn.dataset.dates === 'specific') {
+          datesToggleRow.style.display = 'none';
+          datesPicker.hidden = false;
+        } else {
+          datesToggles.forEach(function (b) { b.classList.remove('is-active'); });
+          btn.classList.add('is-active');
+        }
+      });
+    });
+
+    const itinPage = document.getElementById('itinerary-page');
+    const generateBtn = document.querySelector('.btn-build-itinerary');
+
+    function showItinerary() {
+      closeAllDrawers();
+      itinPage.hidden = false;
+      deviceFrame.classList.add('itin-is-open');
+      itinPage.scrollTo(0, 0);
+    }
+
+    generateBtn.addEventListener('click', showItinerary);
+
+    itinPage.querySelectorAll('.itin-day-pill').forEach((pill) => {
+      pill.addEventListener('click', () => {
+        itinPage.querySelectorAll('.itin-day-pill').forEach(p => p.classList.remove('is-active'));
+        itinPage.querySelectorAll('.itin-day-panel').forEach(p => p.classList.remove('is-active'));
+        pill.classList.add('is-active');
+        itinPage.querySelector('[data-day-panel="' + pill.dataset.day + '"]').classList.add('is-active');
+      });
+    });
+
+    const mapDrawer = document.getElementById('map-drawer');
+    const mapOverlay = document.getElementById('map-overlay');
+    const mapClose = document.querySelector('.map-drawer-close');
+    const refineDrawer = document.getElementById('refine-drawer');
+    const refineOverlay = document.getElementById('refine-overlay');
+    const refineClose = document.querySelector('.refine-drawer-close');
+    const btnRefine = document.getElementById('btn-refine-itin');
+    const btnMap = document.getElementById('btn-map-itin');
+    let mapInstance = null;
+
+    function openMap() {
+      closeAllDrawers();
+      var mapTitleEl = mapDrawer.querySelector('.map-drawer-title');
+      if (mapTitleEl) {
+        mapTitleEl.textContent = itinPage.hidden ? 'Paris hotels map' : 'Your Paris trip';
+      }
+      mapDrawer.classList.add('is-open');
+      mapDrawer.setAttribute('aria-hidden', 'false');
+      mapOverlay.classList.add('is-active');
+      document.body.classList.add('map-is-open');
+      if (!mapInstance) initMap();
+      else mapInstance.invalidateSize();
+    }
+
+    function closeMap() {
+      mapDrawer.classList.remove('is-open');
+      mapDrawer.setAttribute('aria-hidden', 'true');
+      mapOverlay.classList.remove('is-active');
+      document.body.classList.remove('map-is-open');
+    }
+
+    function openRefine() {
+      refineDrawer.classList.add('is-open');
+      refineDrawer.setAttribute('aria-hidden', 'false');
+      refineOverlay.classList.add('is-active');
+    }
+
+    function closeRefine() {
+      refineDrawer.classList.remove('is-open');
+      refineDrawer.setAttribute('aria-hidden', 'true');
+      refineOverlay.classList.remove('is-active');
+      refinePreview.hidden = true;
+      refinePreviewImg.src = '';
+      refinePreviewImg.alt = '';
+      refinePreviewTitle.textContent = '';
+      refineSuggestions.hidden = true;
+      refinePrompt.hidden = true;
+    }
+
+    btnMap.addEventListener('click', openMap);
+    mapClose.addEventListener('click', closeMap);
+    mapOverlay.addEventListener('click', closeMap);
+    var refinePreview = document.getElementById('refine-preview');
+    var refinePreviewImg = document.getElementById('refine-preview-img');
+    var refinePreviewTitle = document.getElementById('refine-preview-title');
+    var refineInput = document.getElementById('refine-chat-input');
+    var defaultPlaceholder = 'Describe what changes you\'d make to your itinerary...';
+    var itemPlaceholder = 'Ask questions about this hotel or describe what you\'d like instead';
+
+    var refinePrompt = document.getElementById('refine-prompt');
+    var refineSuggestions = document.getElementById('refine-suggestions');
+
+    function openRefineForItem(imgSrc, title) {
+      refinePreviewImg.src = imgSrc;
+      refinePreviewImg.alt = title;
+      refinePreviewTitle.textContent = title;
+      refinePreview.hidden = false;
+      refinePrompt.hidden = true;
+      refineSuggestions.hidden = false;
+      refineInput.placeholder = itemPlaceholder;
+      openRefine();
+    }
+
+    function resetRefinePreview() {
+      refinePreview.hidden = true;
+      refinePrompt.hidden = true;
+      refineSuggestions.hidden = true;
+      refineInput.placeholder = defaultPlaceholder;
+      refineInput.value = '';
+    }
+
+    var refineResults = document.getElementById('refine-results');
+    var refineSelectedPill = document.getElementById('refine-selected-pill');
+    var refineResultsIntro = document.getElementById('refine-results-intro');
+    var refineDrawerTitle = refineDrawer.querySelector('.refine-drawer-title');
+
+    document.querySelectorAll('.refine-pill').forEach(function (pill) {
+      pill.addEventListener('click', function () {
+        var pillText = pill.textContent;
+
+        refineDrawer.classList.add('is-fullpage');
+        refineDrawerTitle.textContent = 'Refine your stay';
+        refinePreview.hidden = true;
+        refinePrompt.hidden = true;
+        refineSuggestions.hidden = true;
+        refineResults.hidden = false;
+        refineSelectedPill.textContent = pillText;
+        refineResultsIntro.textContent = 'Here\'s our favourite ' + pillText.toLowerCase() + ' options for your Paris trip';
+        refineInput.value = '';
+        refineInput.placeholder = 'Are you looking for something different?';
+      });
+    });
+
+    function resetRefineResults() {
+      refineDrawer.classList.remove('is-fullpage');
+      refineResults.hidden = true;
+      refineDrawerTitle.textContent = 'Refine your itinerary';
+    }
+
+    var refineOpenedFromFab = false;
+
+    btnRefine.addEventListener('click', function () {
+      refineOpenedFromFab = true;
+      resetRefinePreview();
+      resetRefineResults();
+      refinePreview.hidden = true;
+      refinePreviewImg.src = '';
+      refinePreviewImg.alt = '';
+      refinePreviewTitle.textContent = '';
+      refineSuggestions.hidden = true;
+      refinePrompt.hidden = true;
+      openRefine();
+    });
+
+    refineClose.addEventListener('click', function () {
+      closeRefine();
+      resetRefinePreview();
+      resetRefineResults();
+      refineOpenedFromFab = false;
+    });
+
+    refineOverlay.addEventListener('click', function () {
+      closeRefine();
+      resetRefinePreview();
+      resetRefineResults();
+      refineOpenedFromFab = false;
+    });
+
+    itinPage.querySelectorAll('.itin-item-replace').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var card = btn.closest('.itin-item');
+        var img = card.querySelector('.itin-item-img');
+        var title = card.querySelector('.itin-item-title');
+        openRefineForItem(img.src, title.textContent);
+      });
+    });
+
+    itinPage.querySelectorAll('.itin-stay-refine').forEach(function (btn) {
+      btn.addEventListener('click', function (e) {
+        e.preventDefault();
+        var card = btn.closest('.itin-stay-card');
+        var img = card.querySelector('.itin-stay-img');
+        var title = card.querySelector('.itin-stay-name');
+        openRefineForItem(img.src, title.textContent);
+      });
+    });
+
+    var hotelDetailDrawer = document.getElementById('hotel-detail-drawer');
+    var hotelDetailOverlay = document.getElementById('hotel-detail-overlay');
+    var hotelDetailClose = document.getElementById('hotel-detail-close');
+    var hotelDetailImg = document.getElementById('hotel-detail-img');
+    var hotelDetailName = document.getElementById('hotel-detail-name');
+
+    function openHotelDetail(imgSrc, name) {
+      hotelDetailImg.src = imgSrc;
+      hotelDetailImg.alt = name;
+      hotelDetailName.textContent = name;
+      hotelDetailDrawer.classList.add('is-open');
+      hotelDetailDrawer.setAttribute('aria-hidden', 'false');
+      hotelDetailOverlay.classList.add('is-active');
+    }
+
+    function closeHotelDetail() {
+      hotelDetailDrawer.classList.remove('is-open');
+      hotelDetailDrawer.setAttribute('aria-hidden', 'true');
+      hotelDetailOverlay.classList.remove('is-active');
+    }
+
+    hotelDetailClose.addEventListener('click', closeHotelDetail);
+    hotelDetailOverlay.addEventListener('click', closeHotelDetail);
+
+    itinPage.querySelectorAll('.itin-stay-card').forEach(function (card) {
+      card.addEventListener('click', function (e) {
+        if (e.target.closest('.itin-stay-refine')) return;
+        var img = card.querySelector('.itin-stay-img');
+        var title = card.querySelector('.itin-stay-name');
+        openHotelDetail(img.src, title.textContent);
+      });
+    });
+
+    /* Example Paris hotel pins for map view (illustrative positions) */
+    const parisMapHotels = [
+      { name: 'La Réserve Paris Hotel and Spa', lat: 48.8698, lng: 2.3164 },
+      { name: 'Le Bristol Paris', lat: 48.8717, lng: 2.3186 },
+      { name: 'The Ritz Paris', lat: 48.8673, lng: 2.3295 },
+      { name: 'Hôtel Plaza Athénée', lat: 48.8668, lng: 2.3042 },
+      { name: 'Hôtel de Crillon, A Rosewood Hotel', lat: 48.8671, lng: 2.3214 },
+      { name: 'Le Meurice', lat: 48.8652, lng: 2.3276 },
+      { name: 'Cheval Blanc Paris', lat: 48.8585, lng: 2.3473 },
+      { name: 'Four Seasons Hotel George V', lat: 48.8686, lng: 2.3034 },
+      { name: 'Le Grand Mazarin', lat: 48.8584, lng: 2.3579 },
+      { name: 'Maison Proust', lat: 48.8649, lng: 2.3634 },
+      { name: 'La Fantaisie', lat: 48.8748, lng: 2.3431 },
+      { name: 'The Hoxton Paris', lat: 48.8689, lng: 2.3467 },
+      { name: 'Hôtel Madame Rêve', lat: 48.8609, lng: 2.3414 },
+      { name: 'Bulgari Hotel Paris', lat: 48.8688, lng: 2.3037 },
+      { name: 'Soho House Paris', lat: 48.8791, lng: 2.3388 },
+      { name: 'Hôtel Dame des Arts', lat: 48.8530, lng: 2.3485 },
+      { name: 'Hôtel Les Dames du Panthéon', lat: 48.8468, lng: 2.3454 },
+    ];
+
+    var hotelMapIconSvg = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 22v-6.57"/><path d="M12 11h.01"/><path d="M12 7h.01"/><path d="M14 15.43V22"/><path d="M15 16a5 5 0 0 0-6 0"/><path d="M16 11h.01"/><path d="M16 7h.01"/><path d="M8 11h.01"/><path d="M8 7h.01"/><rect x="4" y="2" width="16" height="20" rx="2"/></svg>';
+
+    function makeHotelMapIcon() {
+      return L.divIcon({
+        className: 'map-marker-icon',
+        html: '<span class="map-marker"><span class="map-marker-emoji">' + hotelMapIconSvg + '</span></span>',
+        iconSize: [36, 36],
+        iconAnchor: [18, 36],
+        popupAnchor: [0, -34],
+      });
+    }
+
+    function escapeHtml(text) {
+      var d = document.createElement('div');
+      d.textContent = text;
+      return d.innerHTML;
+    }
+
+    function initMap() {
+      mapInstance = L.map('itin-map', { zoomControl: false }).setView([48.8566, 2.3522], 12);
+      L.control.zoom({ position: 'bottomright' }).addTo(mapInstance);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© OpenStreetMap © CARTO',
+        subdomains: 'abcd',
+        maxZoom: 19,
+      }).addTo(mapInstance);
+
+      var bounds = L.latLngBounds();
+      parisMapHotels.forEach(function (h) {
+        var marker = L.marker([h.lat, h.lng], { icon: makeHotelMapIcon() }).addTo(mapInstance);
+        marker.bindPopup('<strong>' + escapeHtml(h.name) + '</strong>');
+        bounds.extend([h.lat, h.lng]);
+      });
+      mapInstance.fitBounds(bounds, { padding: [36, 36] });
+    }
+  </script>
+</div>
+</body>
+</html>
